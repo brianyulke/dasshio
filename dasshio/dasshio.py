@@ -158,6 +158,7 @@ while True:
     logger.info("Starting sniffing...")
     try:
         sniff(stop_filter=arp_display,
+              iface=["enp0s18","enp0s19"],
               filter="arp or (udp and src port 68 and dst port 67 and src host 0.0.0.0)",
               store=0,
               count=0)
